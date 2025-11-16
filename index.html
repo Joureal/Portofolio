@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Muh. Joureal Kaori</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+</head>
+
+<script>
+document.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const scrollPos = window.scrollY + 150;
+
+  sections.forEach(sec => {
+    const top = sec.offsetTop;
+    const height = sec.offsetHeight;
+    const id = sec.getAttribute("id");
+
+    const link = document.querySelector(`.sidebar nav a[href="#${id}"]`);
+
+    if (scrollPos >= top && scrollPos < top + height) {
+      document.querySelectorAll(".sidebar nav a").forEach(a => a.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h1 class="logo">
+      <div class="logo-container">
+        <span>JOU<br>REAL</span>
+        <img src="images/favicon.png">
+      </div>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#musik">Playlists</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <main>
+
+      <!-- HERO -->
+      <section id="beranda" class="hero">
+        <div class="hero-text">
+          <h2>Halo, saya <span>Muh. Joureal Kaori</span></h2>
+          <p>Seorang siswa serba bisa yang memiliki ketertarikan pada bidang IT dan eksakta.</p>
+        </div>
+        <div class="hero-img">
+          <img src="images/profile.png" alt="Foto Joe">
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="tentang" class="about">
+        <h2>Tentang Saya</h2>
+
+        <div class="about-grid">
+
+          <div class="about-info">
+            <ul class="formal-info">
+              <li><strong>Nama Lengkap:</strong> Muh. Joureal Kaori</li>
+              <li><strong>Nama Panggilan:</strong> Joe</li>
+              <li><strong>Hobi:</strong> IT, Desain, Eksakta</li>
+              <li><strong>TTL : Sorowako, 28 Agustus 2008</strong></li>
+              <li><strong>Alamat:</strong> Jl. Melati No. 5 Salonsa, Sorowako, Luwu Timur, Sulawesi Selatan</li>
+            </ul>
+
+            <p>
+              Saya adalah seorang siswa yang memiliki ketertarikan kuat pada bidang Matematika, Logika dan sejenisnya.
+              Saya senang mengeksplorasi
+              segala hal-hal baru terutama yang berkaitan dengan teknologi serta beraktivitas di lapangan.
+            </p>
+
+            <p>
+              Saya selalu berusaha memberikan yang terbaik dalam setiap hal yang saya lakukan, baik itu dalam akademik
+              maupun non-akademik.
+              Saya percaya bahwa dengan kerja keras dan dedikasi, saya dapat mencapai tujuan saya dan memberikan
+              kontribusi positif bagi lingkungan sekitar saya.
+              Saya juga senang berkolaborasi dengan orang lain dan belajar dari pengalaman mereka.
+            </p>
+          </div>
+
+          <div class="about-photos">
+            <img src="images/about-photo.jpg" alt="Foto">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PENGALAMAN -->
+      <section id="pengalaman" class="experience">
+        <h2>Pengalaman</h2>
+
+        <div class="exp-content-grid-container">
+
+          <!-- KOLOM KIRI: PENDIDIKAN -->
+          <div class="exp-column">
+            <h3>Riwayat Pendidikan</h3>
+
+            <table class="exp-table">
+              <tr>
+                <td class="exp-icon"><img src="images/logo-yps.png"></td>
+                <td><strong>2016–2022:</strong> SD YPS Singkole Sorowako</td>
+              </tr>
+              <tr>
+                <td class="exp-icon"><img src="images/logo-yps.png"></td>
+                <td><strong>2022–2024:</strong> SMP YPS Singkole Sorowako</td>
+              </tr>
+              <tr>
+                <td class="exp-icon"><img src="images/logo-icg.png"></td>
+                <td><strong>2024–Sekarang:</strong> MAN Insan Cendekia Gowa</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- KOLOM KANAN: ORGANISASI -->
+          <div class="exp-column">
+            <h3>Pengalaman Organisasi</h3>
+
+            <table class="exp-table">
+              <tr>
+                <td class="exp-icon"><img src="images/logo-rohis.png"></td>
+                <td><strong>2022/2023:</strong> Ketua ROHIS SMP YPS Singkole</td>
+              </tr>
+              <tr>
+                <td class="exp-icon"><img src="images/logo-osis.png"></td>
+                <td><strong>2022/2023:</strong> Anggota OSIS Bidang Keagamaan SMP YPS Singkole</td>
+              </tr>
+              <tr>
+                <td class="exp-icon"><img src="images/logo-osis.png"></td>
+                <td><strong>2023/2024:</strong> Sekretaris OSIS SMP YPS Singkole</td>
+              </tr>
+              <tr>
+                <td class="exp-icon"><img src="images/logo-mpk.png"></td>
+                <td><strong>2024/2025:</strong> Anggota MPK Komisi Humas & Aspirator MAN IC Gowa</td>
+              </tr>
+              <tr>
+                <td class="exp-icon"><img src="images/logo-osim.png"></td>
+                <td><strong>2025/2026:</strong> Bendahara II OSIM MAN IC Gowa</td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="proyek" class="projects">
+        <h2>Proyek / Karya</h2>
+
+        <div class="project-grid">
+          <div class="project-card">
+            <img src="images/project1.png">
+            <h3>POTABLE</h3>
+            <p>Sebuah Penelitian tentang Perancangan alat penguji kualitas air minum berbasis <i>IoT</i>.
+              <br>
+              <b>Prestasi yang diraih:</b>
+              <li>Juara 1 Lomba Karya Ilmiah Remaja pada ajang <i>Alkali Contest</i> UIN Alauddin 2025</li>
+            </p>
+          </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="galeri" class="gallery">
+        <h2>Galeri</h2>
+
+        <div class="gallery-grid">
+          <img src="images/gallery1.jpg">
+          <img src="images/gallery2.jpg">
+          <img src="images/gallery3.jpg">
+          <img src="images/gallery4.jpg">
+          <img src="images/gallery5.jpg">
+          <img src="images/gallery7.jpg">
+          <img src="images/gallery6.jpg">
+          <img src="images/gallery8.jpg">
+          <img src="images/gallery9.jpg">
+          <img src="images/gallery10.jpg">
+          <img src="images/gallery11.jpg">
+          <img src="images/gallery12.jpg">
+        </div>
+      </section>
+
+      <!-- SELERA MUSIK -->
+      <section id="musik" class="music">
+        <h2>Playlists</h2>
+
+        <p class="music-desc">
+          The best albums that I ever listened to and always boost my moods.
+        </p>
+
+        <div class="music-grid">
+
+          <!-- ALBUM ITEM -->
+          <!-- Freudian — Daniel Caesar -->
+          <div class="album-card">
+            <img src="images/freudian.jpeg" alt="Freudian">
+            <div class="album-info">
+              <h4>Freudian</h4>
+              <p>Daniel Caesar</p>
+              <a href="https://open.spotify.com/album/1Vohf1K9Xz7C5m0FzvzKpG" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Time Flies — Oasis -->
+          <div class="album-card">
+            <img src="images/timeflies.jpeg" alt="Time Flies">
+            <div class="album-info">
+              <h4>Time Flies</h4>
+              <p>Oasis</p>
+              <a href="https://open.spotify.com/album/0Xf9aZsN8zPzqfQ2UqWbKX" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Parachutes — Coldplay -->
+          <div class="album-card">
+            <img src="images/parachutes.jpeg" alt="Parachutes">
+            <div class="album-info">
+              <h4>Parachutes</h4>
+              <p>Coldplay</p>
+              <a href="https://open.spotify.com/album/6ZG5lRT77aJ3btmArcykra" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Say Hi to HIVI — HIVI -->
+          <div class="album-card">
+            <img src="images/hivi.png" alt="Say Hi to HIVI">
+            <div class="album-info">
+              <h4>Say Hi to HIVI</h4>
+              <p>HIVI!</p>
+              <a href="https://open.spotify.com/album/6YMl7QOueJ1awtZLxE1qLL" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Apricot Princess — Rex Orange County -->
+          <div class="album-card">
+            <img src="images/apricot.jpeg" alt="Apricot Princess">
+            <div class="album-info">
+              <h4>Apricot Princess</h4>
+              <p>Rex Orange County</p>
+              <a href="https://open.spotify.com/album/7rZQNKtXvVlKYgBeRTZxg2" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Reality Club Presents — Reality Club -->
+          <div class="album-card">
+            <img src="images/rcp.jpeg" alt="Reality Club Presents">
+            <div class="album-info">
+              <h4>Reality Club Presents</h4>
+              <p>Reality Club</p>
+              <a href="https://open.spotify.com/album/3tKVWeItPxX2VINeodIZ6T" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- What Do You Really Know? — Reality Club -->
+          <div class="album-card">
+            <img src="images/wdyrk.jpeg" alt="What Do You Really Know">
+            <div class="album-info">
+              <h4>What Do You Really Know?</h4>
+              <p>Reality Club</p>
+              <a href="https://open.spotify.com/album/3YZ7RUTpujISiFDUFxu05o" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+
+          <!-- Sheila on 7 — Sheila on 7 -->
+          <div class="album-card">
+            <img src="images/so7.jpeg" alt="Sheila on 7">
+            <div class="album-info">
+              <h4>Sheila on 7</h4>
+              <p>Sheila On 7</p>
+              <a href="https://open.spotify.com/album/5Cx7YCOgY6rfZ8XjMaPqkB" target="_blank" class="spotify-link">
+                Buka di Spotify
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="kontak" class="contact">
+        <div class="contact-inner">
+          <h2>Kontak</h2>
+          <p>Hubungi saya melalui email atau media sosial berikut:</p>
+
+          <ul>
+            <li><a href="mailto:muhjourealk@gmail.com">muhjourealk@gmail.com</a></li>
+            <li><a href="https://github.com/Joureal" target="_blank">GitHub</a></li>
+            <li><a href="https://www.instagram.com/muhjourealk/" target="_blank">Instagram</a></li>
+          </ul>
+
+          <form class="contact-form">
+            <input type="text" placeholder="Nama" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan..." required></textarea>
+            <button type="submit">Kirim</button>
+          </form>
+
+          <div class="cv-download">
+            <a href="files/CV_Joureal.pdf" download class="cv-btn">Unduh CV Saya</a>
+          </div>
+        </div>
+
+        <footer class="contact-footer">
+          <p>© 2025 Muh. Joureal Kaori | HTML dan CSS</p>
+        </footer>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+
+</html>
